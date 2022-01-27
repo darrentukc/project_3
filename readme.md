@@ -10,7 +10,11 @@ Reddit is a very large and popular forum, with users across different countries 
 
 ##### What we plan to do
 
-Men In Black (MIB) is an entity that researches & monitors the sentiment of people on aliens, whether conspiracies that are made are a little too close to things that the people should not know about. They are requesting us, the Reddit Data Science team to create a model to classify reddit posts and identify the key words that differentiates the post from "Aliens" to "Space". This would facilitate MIB's intelligence collection efforts about sentiments from ordinary citizens. This information can also be useful for other associations to promote its marketing effort on social media, events and podcasts, that in turn can feed information to the mainstream.
+Men In Black (MIB) is an entity that researches & monitors the sentiment of people on aliens, whether conspiracies that are made are a little too close to things that the people should not know about. Most of this 'information leak' will end up in either /aliens or /space. Instead of shutting down reddit or deleting the subreddits, moderating r/aliens could be an efficient way of monitoring.
+
+Thus, they are requesting us to create a model to classify reddit posts and identify the key words that differentiates the post from "Aliens" to "Space". This can allow them to focus more of their efforts on r/aliens while using the model to flag out posts in r/space that potentially should be in r/aliens.
+
+Also, the model should be able to generate a list of important words that not only are used to classify the posts, but to give a general sense of the topics of most of the posts. This information can also be useful for other associations to promote its marketing effort on social media, events and podcasts, that in turn can feed information to the mainstream.'
 
 ##### What models will we be exploring
 
@@ -136,25 +140,37 @@ Space Important Features:
 
 Recalling our problem statement:
 
-'Men In Black (MIB) is a secret association that researches & monitors the sentiment of people on aliens, whether conspiracies that are made are a little too close to things that the people should not know about. Think area 51 and the roswell incident. But, nothing is fullproof. Things get leaked out anyway. They are usually leaked to r/aliens and r/space.  Instead of completely shutting down reddit, having a subreddit like aliens would be useful for MIB to monitor what people are talking about. They they are requesting us, the Reddit Data Science team to create a model to classify reddit posts and identify the key words that differentiates the post from "Aliens" to "Space".
+>Men In Black (MIB) is an entity that researches & monitors the sentiment of people on aliens, whether conspiracies that are made are a little too close to things that the people should not know about. Most of this 'information leak' will end up in either /aliens or /space. Instead of shutting down reddit or deleting the subreddits, moderating r/aliens could be an efficient way of monitoring.
+Thus, they are requesting us to create a model to classify reddit posts and identify the key words that differentiates the post from "Aliens" to "Space". This can allow them to focus more of their efforts on r/aliens while using the model to flag out posts in r/space that potentially should be in r/aliens.
 
-This will not only filter out posts from r/space that should belong to r/aliens, it will also facilitate MIB's intelligence collection efforts about sentiments from ordinary citizens. This information can also be useful for other associations to promote its marketing effort on social media, events and podcasts, that in turn can feed information to the mainstream.'
+>The success of the model will be assessed based on its F1 score on unseen test data. Accuracy and F1-score will be our main metrics to evaluate model performance and we would like to minimze it ideally. We should also be able to interpret feature importance from the model to identify key words the key words that seperates the 2 subreddits.
 
-All the models trained were able to classify the posts accurately, with a F1 score between 89% to 91% and an AUC of 96% to 97%, but we chose Tfidf vectorizer and Logistic Regression model as it is easier to interpret. The model makes its predictions by using the coefficients of each word in the post and calculates the odds of it belonging to alien subreddit or it not belonging to alien subreddit.
+All the models trained were able to classify the posts accurately, with a F1 score between 89% to 91% and an AUC of 96% to 97% on unseen data. We chose Logistic Regression with TFIDF vectorizer as it not only gives a good F1 score, it is easily interpretable.
 
-The top words with the highest 'weights' for alien subreddit are:
+>Also, the model should be able to generate a list of important words that not only are used to classify the posts, but to give a general sense of the topics of most of the posts. This information can also be useful for other associations to promote its marketing effort on social media, events and podcasts, that in turn can feed information to the mainstream.'
+
+The model makes its predictions by using the coefficients of each word in the post and calculates the odds of it belonging to alien subreddit or it not belonging to alien subreddit.
+
+The top words with the highest 'weights' for alien subreddit ( in decreaseing order ) are:
 - alien
 - ufo
 - specie(s)
 - human
 - extraterrestrial
-- disclosure
-- being
-- story
-- people
-- may
 
-The more the above listed words appear in a post, the higher the chance if it belonging to alien subreddit.
+The more the above listed words appear in a post, the higher the chance if it belonging to alien subreddit. We can also infer from these words that the topics on r/aliens are on aliens, ufos and extraterrestrials.
+
+The top words with the highest 'weights' for space subreddit ( in decreaseing order ) are:
+- space
+- telescope
+- launch
+- moon
+- jwst
+ <br><br>
+
+The more the above listed words appear in a post, the higher the chance if it belonging to alien subreddit. We can infer from these words that the topics on r/space are about space, James Webb Space Telescope and perhaps the launching of rockets to the moon.
+
+With these important words, media could influence topics by using social media marketing, Search Engine Optimizations, events or even podcasts.
 
 ##### Limitations of Model
 
