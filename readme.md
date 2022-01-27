@@ -35,11 +35,11 @@ This model will facilitate MIB's intelligence collection efforts on sentiments o
 7. [Cleaning](#7.-Cleaning)
 8. [Modeling](#8.-Modeling)
 9. [Scoring and Evaluating Models](#9.-Scoring-Models)
-10. [Choice of Production Model](#10.-Choice-of-Production-Model:-Logistic-Regression-with-Tfidf-Vectorizer.)
+10. [Choice of Production Model](#10.-Choice-of-Production-Model:-Logistic-Regression-with-Tfidf-Vectorizer)
 11. [Conclusion](#11.-Conclusion)
 
 
-### 1. Datasets Used :
+### 1. Datasets Used:
 
 The following datasets were used for this projects:
 - alien.csv
