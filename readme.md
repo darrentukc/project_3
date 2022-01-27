@@ -26,8 +26,8 @@ This model will facilitate MIB's intelligence collection efforts on sentiments o
 
 ## Contents:
 
-1. [Datasets Used](#1.-Datasets-Used:)
-2. [Data Dictionary](#2.-Data-Dictionary:)
+1. [Datasets Used](#1.-Datasets-Used)
+2. [Data Dictionary](#2.-Data-Dictionary)
 3. [Importing Data](#3.-Importing-Data)
 4. [Combine Dataframes](#4.-Combine-dataframes)
 5. [Feature Engineering](#5.-Feature-Engineering)
@@ -35,11 +35,11 @@ This model will facilitate MIB's intelligence collection efforts on sentiments o
 7. [Cleaning](#7.-Cleaning)
 8. [Modeling](#8.-Modeling)
 9. [Scoring and Evaluating Models](#9.-Scoring-Models)
-10. [Choice of Production Model](#10.-Choice-of-Production-Model:-Logistic-Regression-with-Tfidf-Vectorizer)
+10. [Choice of Production Model](#10.-Choice-of-Production-Model)
 11. [Conclusion](#11.-Conclusion)
 
 
-### 1. Datasets Used:
+### 1. Datasets Used
 
 The following datasets were used for this projects:
 - alien.csv
@@ -47,7 +47,7 @@ The following datasets were used for this projects:
 These datasets were obtained by scrapping the subreddit Space and Aliens. There are 4500 Space posts and 2400 Aliens posts.
 
 
-### 2. Data Dictionary:
+### 2. Data Dictionary
 
 The below is a data dictionary containing all the data features, type and its description:
 
@@ -106,7 +106,9 @@ We trained 3 classifiers with 2 vectorizers, a total of 6 models. Out of the 6, 
 
 Of the 3 chosen models, we got a F1 score of between 88% to 90%, which is relatively good. A high F1 score represents that both Precision and Recall scores are high, which is what we were aiming for. The AUC Curve score for 3 models were also good, between 96% to 97%.
 
-### 10. Choice of Production Model: Logistic Regression with Tfidf vectorizer
+### 10. Choice of Production Model
+
+Logistic Regression with TFIDF vectorizer
 
 Of the 3 models, all of them scored well. All of them were able to accurately classify posts from aliens to space. But we chose logistic regression with Tfidf Vectorizer as it is the simplest model and the coefficients are easily interpretable, which results in us being able to extract the important features of the model for the secondary audience, the different marketing departments from MIB.
 
