@@ -121,20 +121,20 @@ We managed to extract the following:
 Alien Important Features:
 |Feature|Coefficient|
 |---|---|
-|alien|6.33|
-|ufo|3.36|
-|specie|2.44|
-|human|1.77|
-|exraterrestrial|1.56|
+|alien|6.5|
+|ufo|3.42|
+|specie|2.9|
+|human|1.90|
+|people|1.58|
 
 Space Important Features:
 |Feature|Coefficient|
 |---|---|
-|space|-4.69|
-|telescope|-2.70|
-|launch|-2.49|
-|jwst|-2.05|
-|moon|-1.66|
+|space|-4.38|
+|telescope|-2.47|
+|launch|-2.36|
+|moon|-2.10|
+|jwst|-1.81|
 
 ### 11. Conclusion
 
@@ -156,7 +156,7 @@ The top words with the highest 'weights' for alien subreddit ( in decreaseing or
 - ufo
 - specie(s)
 - human
-- extraterrestrial
+- people
 
 The more the above listed words appear in a post, the higher the chance if it belonging to alien subreddit. We can also infer from these words that the topics on r/aliens are on aliens, ufos and extraterrestrials.
 
@@ -180,5 +180,5 @@ With these important words, media could influence topics by using social media m
 
 ##### Future Improvements
 
-- Sentiment analysis could be done on the reults of the model, allowing MIB to have an idea of the general sesntiment of people and plan for their policies.
+- Sentiment analysis could be done on the results of the model, allowing MIB to have an idea of the general sentiments of people and plan for their policies.
 - Process information from text in image and transcript of videos could be added to the data to train a better model, as most of the data lost was through images and videos.
