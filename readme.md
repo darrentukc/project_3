@@ -95,7 +95,7 @@ Here, we found that:
 - Remove links and emojis
 - Remove markdown text formatting
 - Remove Non English characters
-- Remove outliers, post_length < 3, post_length > 414
+- Remove outliers, post_length < 3, post_length > 194
 
 ### Further Processing and EDA
 
